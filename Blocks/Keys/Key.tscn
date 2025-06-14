@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bf3g2ehbwkbv3" path="res://Assets/kenney_new-platformer-pack-1.0/Sprites/Tiles/Default/key_yellow.png" id="1_rm5nf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kw0ur"]
-radius = 42.0119
+radius = 22.0227
 
 [node name="Key" type="Node2D"]
 script = ExtResource("1_kw0ur")
