@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var CAMERA_CHASE_SPEED: float = 0.08
+@export var CAMERA_CHASE_SPEED: float = 0.02
 @export var ROTATE_SPEED: float = 3.0
 @export var ROTATE_SPEED_MAX: float = 18
 @export var ROTATE_ACCEL: float = 0.03
@@ -11,14 +11,17 @@ extends Node2D
 @onready var camera: Camera2D = $Camera
 @onready var rotate_speed: float = self.ROTATE_SPEED
 
+func _ready() -> void:
+	self.camera.position = self.circle.position
+
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("ui_left"):
-		self._rotate(delta)
-	elif Input.is_action_pressed("ui_right"):
 		self._rotate(-delta)
+	elif Input.is_action_pressed("ui_right"):
+		self._rotate(delta)
 	else:
 		self.rotate_speed = self.ROTATE_SPEED
-	self.camera.global_position = lerp(
+	self.camera.position = lerp(
 		self.camera.position,
 		self.circle.position,
 		self.CAMERA_CHASE_SPEED,
