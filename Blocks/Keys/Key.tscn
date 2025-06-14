@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7wdxe62u5att"]
+
+[ext_resource type="Script" uid="uid://dg2r2e168x17c" path="res://Blocks/Keys/Key.gd" id="1_kw0ur"]
+[ext_resource type="Texture2D" uid="uid://bf3g2ehbwkbv3" path="res://Assets/kenney_new-platformer-pack-1.0/Sprites/Tiles/Default/key_yellow.png" id="1_rm5nf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kw0ur"]
+radius = 42.0119
+
+[node name="Key" type="Node2D"]
+script = ExtResource("1_kw0ur")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rm5nf")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_kw0ur")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
