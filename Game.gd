@@ -55,6 +55,7 @@ func _rotate(direction: float) -> void:
 		PhysicsServer2D.AREA_PARAM_GRAVITY_VECTOR,
 		self.gravity,
 	)
+	Globals.on_gravity_change.emit(self.gravity)
 
 func _next_level(circle: Circle) -> void:
 	get_tree().quit()
