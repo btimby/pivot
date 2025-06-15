@@ -12,7 +12,7 @@ extends Node2D
 
 const CIRCLE := preload("res://Characters/Circle.tscn")
 const LEVELS: Array[PackedScene] = [
-	preload("res://Levels/Level.tscn"),
+	preload("res://Levels/Level0.tscn"),
 ]
 
 var level_num: int = 0
@@ -26,7 +26,7 @@ func _ready() -> void:
 	self.add_child(self.player)
 	self.player.global_position = self.level.start.global_position
 	self.camera.global_position = self.player.global_position
-	Globals.exit.connect(self._next_level)
+	self.level.exit.on_exit.connect(self._next_level)
 
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("ui_left"):

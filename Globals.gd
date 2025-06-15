@@ -1,3 +1,3 @@
 extends Node
 
-signal exit
+enum KeyColor {RED, YELLOW, BLUE, GREEN}
