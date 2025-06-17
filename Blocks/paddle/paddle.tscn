@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cf6de048nj2ae"]
+[gd_scene load_steps=6 format=3 uid="uid://cf6de048nj2ae"]
+
+[ext_resource type="Script" uid="uid://bxxoc70q6th8" path="res://Blocks/paddle/rigid_body_2d.gd" id="1_6jnvf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7if2b"]
 
@@ -14,6 +16,7 @@ size = Vector2(6, 64)
 [node name="PinJoint2D" type="PinJoint2D" parent="."]
 node_a = NodePath("../StaticBody2D")
 node_b = NodePath("../RigidBody2D")
+softness = 1.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -26,6 +29,7 @@ scale = Vector2(20.0227, 20)
 mesh = SubResource("SphereMesh_6jnvf")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
+script = ExtResource("1_6jnvf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 position = Vector2(0, -32)

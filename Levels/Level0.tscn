@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://q4qboexsncx8"]
+[gd_scene load_steps=12 format=4 uid="uid://57ft3017p0e"]
 
 [ext_resource type="Script" uid="uid://cirnkdawni4t0" path="res://Levels/Level0.gd" id="1_rwetj"]
 [ext_resource type="Texture2D" uid="uid://x5oxuu7kq8md" path="res://Assets/kenney_new-platformer-pack-1.0/Spritesheets/spritesheet-tiles-default.png" id="2_h2dl5"]
