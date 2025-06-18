@@ -9,3 +9,5 @@ CAMERA_CHASE_SPEED = 0.075
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(611, 341)
 ignore_rotation = false
+
+[node name="Node2D" type="Node2D" parent="."]
