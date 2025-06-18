@@ -11,16 +11,16 @@ extends Node2D
 @onready var rotate_speed: float = self.ROTATE_SPEED
 
 const CIRCLE := preload("res://Characters/Circle.tscn")
-const LEVELS: Array[PackedScene] = [
-	preload("res://Levels/Level0.tscn"),
-]
+#const LEVELS: Array[PackedScene] = [
+#	preload("res://Levels/Level0.tscn"),
+#]
 
-var level_num: int = 0
+#var level_num: int = 0
 var level: Node2D
 var player: Node2D
 
 func _ready() -> void:
-	self.level = LEVELS[self.level_num].instantiate()
+#	self.level = LEVELS[self.level_num].instantiate()
 	self.add_child(self.level)
 	self.player = CIRCLE.instantiate()
 	self.add_child(self.player)
