@@ -7,7 +7,7 @@
 [sub_resource type="SphereMesh" id="SphereMesh_6jnvf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v6w6n"]
-size = Vector2(6, 64)
+size = Vector2(16, 155)
 
 [sub_resource type="BoxMesh" id="BoxMesh_sw2xq"]
 
@@ -16,9 +16,12 @@ size = Vector2(6, 64)
 [node name="PinJoint2D" type="PinJoint2D" parent="."]
 node_a = NodePath("../StaticBody2D")
 node_b = NodePath("../RigidBody2D")
+bias = 0.9
 softness = 1.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 0
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("CircleShape2D_7if2b")
@@ -32,10 +35,10 @@ mesh = SubResource("SphereMesh_6jnvf")
 script = ExtResource("1_6jnvf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(0, -32)
+position = Vector2(0, -77.5)
 shape = SubResource("RectangleShape2D_v6w6n")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="RigidBody2D"]
-position = Vector2(2.38419e-07, -31.75)
-scale = Vector2(6, 64.5)
+position = Vector2(0, -77.75)
+scale = Vector2(16, 156.5)
 mesh = SubResource("BoxMesh_sw2xq")
