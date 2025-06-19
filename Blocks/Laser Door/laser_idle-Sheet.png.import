@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dahf4tmtq0axo"
-path="res://.godot/imported/laser_idle-Sheet.png-064375b609598a9b36879c728e253735.ctex"
+path="res://.godot/imported/laser_idle-Sheet.png-efa63b716084c363b0b6e1aed32a786e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/laser_idle-Sheet.png"
-dest_files=["res://.godot/imported/laser_idle-Sheet.png-064375b609598a9b36879c728e253735.ctex"]
+source_file="res://Blocks/Laser Door/laser_idle-Sheet.png"
+dest_files=["res://.godot/imported/laser_idle-Sheet.png-efa63b716084c363b0b6e1aed32a786e.ctex"]
 
 [params]
 

@@ -28,5 +28,6 @@ func _ready() -> void:
 		new_node.set_script(script)
 		new_node.game_scene = game_scene
 		new_node.target_scene = scene[1]
+		new_node.font_size = 30
 		
 		get_node("MarginContainer/VBoxContainer").add_child(new_node)
